@@ -423,21 +423,6 @@
 
 </li>
 
-</div><div id="s-lg-box-wrapper-9931373" class="s-lg-box-wrapper-9931373">
-
-
-    <div id="s-lg-box-8416065-container" class="s-lib-box-container">
-        <div id="s-lg-box-8416065" class="s-lib-box s-lib-box-std">
-                            <h2 class="s-lib-box-title">
-                    Description
-                                    </h2>
-                        <div id="s-lg-box-collapse-8416065" >
-                <div class="s-lib-box-content">
-                    
-
-    <div class="">
-        <ul id="s-lg-link-list-57167528"
-            class="s-lg-link-list s-lg-link-list-2">
 
 <li class="">
     
