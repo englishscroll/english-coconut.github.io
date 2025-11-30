@@ -8,62 +8,72 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-    html, body {
+    /* Body background: subtle parchment */
+    body {
         margin: 0;
         padding: 0;
+        background: #f2e6c9 url('https://i.imgur.com/5rK9tUu.jpg') repeat; /* subtle parchment texture */
         font-family: Georgia, serif;
-        background-color: #f2e6c9;
-        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
     }
 
-    /* Full-page scroll background */
-    body::before {
+    /* The main scroll */
+    .scroll {
+        background: #fff8e7;
+        border: 5px solid #b58b4c;
+        border-radius: 20px;
+        width: 80%;
+        max-width: 1200px;
+        padding: 40px 60px;
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+        position: relative;
+    }
+
+    /* Top scroll decoration */
+    .scroll::before {
         content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('https://www.pngall.com/wp-content/uploads/2016/07/Scroll-PNG-Clipart.png');
-        background-repeat: repeat-y;
-        background-position: left top, right top;
-        background-size: 150px 100%;
-        z-index: -1;
-        opacity: 0.3; /* light scroll effect */
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 40px;
+        background: url('https://i.imgur.com/LrFZbCo.png') no-repeat center;
+        background-size: contain;
     }
 
-    /* Main content container */
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px 40px;
-        background: rgba(255, 248, 231, 0.95); /* semi-transparent parchment feel */
-        box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
-        border-left: 4px solid #b58b4c;
-        border-right: 4px solid #b58b4c;
+    /* Bottom scroll decoration */
+    .scroll::after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 40px;
+        background: url('https://i.imgur.com/LrFZbCo.png') no-repeat center;
+        background-size: contain;
+        transform: translateX(-50%) rotate(180deg);
     }
 
     /* Scroll banner */
     .scroll-banner {
-        width: 100%;
-        padding: 60px 20px;
         text-align: center;
-        background-image: url('https://www.pngall.com/wp-content/uploads/2016/07/Scroll-PNG-Clipart.png');
-        background-size: cover;
-        background-position: center;
-        border-top: 5px solid #8b5a2b;
-        border-bottom: 5px solid #8b5a2b;
+        padding: 30px 0;
         margin-bottom: 30px;
+        background: url('https://www.pngall.com/wp-content/uploads/2016/07/Scroll-PNG-Clipart.png') no-repeat center;
+        background-size: contain;
     }
 
     .scroll-banner h1 {
         font-family: 'Great Vibes', cursive;
         font-size: 90px;
         color: #4b2e0f;
-        text-shadow: 3px 3px 6px #e8d7b4;
         margin: 0;
         letter-spacing: 3px;
-        line-height: 1.2;
+        text-shadow: 3px 3px 6px #e8d7b4;
         animation: shimmer 3s infinite alternate;
     }
 
@@ -77,6 +87,7 @@
         text-align: center;
         color: #4b2e0f;
         font-size: 32px;
+        margin-top: 0;
     }
 
     p {
@@ -100,20 +111,21 @@
         text-decoration: underline;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
+        .scroll {
+            width: 90%;
+            padding: 20px 30px;
+        }
+
         .scroll-banner h1 {
             font-size: 60px;
-        }
-        .container {
-            padding: 15px 20px;
         }
     }
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="scroll">
     <div class="scroll-banner">
         <h1>English Scroll</h1>
     </div>
@@ -129,4 +141,11 @@
         <li><a href="sentence-structure.md">Sentence Structure</a></li>
         <li><a href="punctuation.md">Punctuation</a></li>
         <li><a href="academic-grammar.md">Academic Grammar</a></li>
-        <li><a href="common-errors.md">Common Errors</a
+        <li><a href="common-errors.md">Common Errors</a></li>
+        <li><a href="practice.md">Practice Exercises</a></li>
+        <li><a href="readings.md">Readings</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
