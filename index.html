@@ -1,94 +1,219 @@
-<meta charset="UTF-8">
-<title>English Scroll Banner</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Scroll Banner</title>
 
-<!-- Calligraphy Font -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Calligraphy Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-<style>
-    body {
-        background: #f2e6c9;
-        margin: 0;
-        padding: 0;
-        font-family: Georgia, serif;
-    }
+    <style>
+        /* Smooth transitions */
+        * {
+            transition: background-color 0.25s ease,
+                        color 0.25s ease,
+                        border-color 0.25s ease;
+        }
 
-    .scroll-banner {
-        width: 100%;
-        padding: 80px 20px;
-        text-align: center;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, serif;
+        }
 
-        background-image: url('https://www.pngall.com/wp-content/uploads/2016/07/Scroll-PNG-Clipart.png');
-        background-size: cover;
-        background-position: center;
+        /* ====================================================== */
+        /*                      LIGHT THEME                       */
+        /* ====================================================== */
+        body.light {
+            background: #f2e6c9;
+            color: #3b2e1f;
+        }
 
-        background-color: #d3b98a;
-        border-top: 5px solid #8b5a2b;
-        border-bottom: 5px solid #8b5a2b;
-    }
+        .light .scroll-banner {
+            background-color: #d3b98a;
+            border-top: 5px solid #8b5a2b;
+            border-bottom: 5px solid #8b5a2b;
+        }
 
-    .scroll-banner h1 {
-        font-family: 'Great Vibes', cursive;
-        font-size: 90px;
-        color: #4b2e0f;
-        text-shadow: 3px 3px 6px #e8d7b4;
-        margin: 0;
-        letter-spacing: 3px;
-    }
+        .light .scroll-banner h1 {
+            color: #4b2e0f;
+            text-shadow: 3px 3px 6px #e8d7b4;
+        }
 
-    .content {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
-        background: #fff8e7;
-        border: 2px solid #b58b4c;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    }
+        .light .content {
+            background: #fff8e7;
+            border: 2px solid #b58b4c;
+            color: #4b2e0f;
+        }
 
-    .content h2 {
-        font-size: 32px;
-        margin-top: 0;
-        text-align: center;
-        color: #4b2e0f;
-    }
+        .light .content a {
+            color: #7a4a1f;
+        }
+        .light .content a:hover {
+            text-decoration: underline;
+        }
 
-    .content ul {
-        font-size: 20px;
-        line-height: 1.7;
-    }
+        /* ====================================================== */
+        /*                      DARK THEME                        */
+        /* ====================================================== */
+        body.dark {
+            background: #1f1812;
+            color: #e8d9c4;
+        }
 
-    .content a {
-        color: #7a4a1f;
-        font-weight: bold;
-        text-decoration: none;
-    }
+        .dark .scroll-banner {
+            background-color: #3a2e22;
+            border-top: 5px solid #6a4b2a;
+            border-bottom: 5px solid #6a4b2a;
+        }
 
-    .content a:hover {
-        text-decoration: underline;
-    }
-</style>
+        .dark .scroll-banner h1 {
+            color: #f2e3c6;
+            text-shadow: 3px 3px 6px #2a241d;
+        }
 
+        .dark .content {
+            background: #2a221b;
+            border: 2px solid #4b3a2f;
+            color: #f2e3c6;
+        }
 
-<!-- Scroll Banner -->
-<div class="scroll-banner">
-    <h1>English Scroll</h1>
-</div>
+        .dark .content a {
+            color: #d0a869;
+        }
+        .dark .content a:hover {
+            color: #ffce73;
+        }
 
-<!-- Main Content -->
-<div class="content">
-    <h2>A free wiki</h2>
+        /* ====================================================== */
+        /*                    SHARED ELEMENTS                     */
+        /* ====================================================== */
+        .scroll-banner {
+            width: 100%;
+            padding: 80px 20px;
+            text-align: center;
+            background-image: url('https://www.pngall.com/wp-content/uploads/2016/07/Scroll-PNG-Clipart.png');
+            background-size: cover;
+            background-position: center;
+        }
 
-    <p>Welcome! This site provides clear explanations and helpful links to help you master English grammar at the college level.</p>
+        .scroll-banner h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 90px;
+            margin: 0;
+            letter-spacing: 3px;
+        }
 
-    <p>Explore our main topics:</p>
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
 
-    <ul>
-        <li><a href="parts-of-speech.html">Parts of Speech</a></li>
-        <li><a href="sentence-structure.html">Sentence Structure</a></li>
-        <li><a href="punctuation.html">Punctuation</a></li>
-        <li><a href="academic-grammar.html">Academic Grammar</a></li>
-        <li><a href="common-errors.html">Common Errors</a></li>
-        <li><a href="practice.html">Practice Exercises</a></li>
-        <li><a href="readings.html">Readings</a></li>
-    </ul>
-</div>
+        .content h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .content ul {
+            font-size: 20px;
+            line-height: 1.7;
+            padding-left: 20px;
+        }
+
+        /* Toggle Button */
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: 2px solid currentColor;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            color: inherit;
+            z-index: 999;
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .toggle-btn:hover {
+            background-color: rgba(255,255,255,0.15);
+        }
+
+        /* ====================================================== */
+        /*                 MOBILE RESPONSIVE RULES                */
+        /* ====================================================== */
+
+        @media (max-width: 768px) {
+            .scroll-banner {
+                padding: 50px 10px;
+            }
+
+            .scroll-banner h1 {
+                font-size: 60px;
+                letter-spacing: 2px;
+            }
+
+            .content {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .content h2 {
+                font-size: 26px;
+            }
+
+            .content ul {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scroll-banner {
+                padding: 40px 5px;
+            }
+
+            .scroll-banner h1 {
+                font-size: 46px;
+                letter-spacing: 1px;
+            }
+
+            .toggle-btn {
+                top: 15px;
+                right: 15px;
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+
+            .content {
+                padding: 12px;
+            }
+
+            .content ul {
+                font-size: 17px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="toggle-btn">🌙 Dark Mode</button>
+
+    <!-- Scroll Banner -->
+    <div class="scroll-banner">
+        <h1>English Scroll</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>A free wiki</h2>
+
+        <p>Welcome! This site provides clear explanations and helpful links to help you master English grammar at
