@@ -86,7 +86,7 @@
         <li><a href="parts-of-speech.md">Parts of Speech</a></li>
         <li><a href="sentence-structure.md">Sentence Structure</a></li>
         <li><a href="punctuation.md">Punctuation</a></li>
-        <li><a href="academic-grammar.md">Academic Grammar</a></li>
+        <li><a href="academic-grammar.html">Academic Grammar</a></li>
         <li><a href="common-errors.md">Common Errors</a></li>
         <li><a href="practice.md">Practice Exercises</a></li>
         <li><a href="readings.md">Readings</a></li>
